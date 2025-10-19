@@ -7,62 +7,38 @@ import { ArrowLeft, Lightbulb } from "lucide-react";
 const weekData = [
   {
     week: 1,
-    title: "Introduction to AI & Digital Citizenship",
-    objective: "Students will be introduced to the fundamental concepts of Artificial Intelligence, understand the importance of their digital footprint, and begin planning their personal portfolio website.",
+    title: "AI Fundamentals & Prompting Mastery",
+    objective: "Students will learn the fundamentals of AI, understand digital citizenship, and master AI prompting techniques for text and image generation.",
     days: [
-      { day: 1, topic: "What is AI?", activity: "Icebreaker: 'AI in My Life' discussion. Students brainstorm and share examples of AI they encounter daily." },
-      { day: 2, topic: "Digital Footprint & Online Safety", activity: "Group Activity: Students research their own digital footprint and discuss the importance of online privacy and safety." },
-      { day: 3, topic: "Introduction to Personal Portfolios", activity: "Presentation & Discussion: Review examples of student portfolios and discuss the purpose and benefits of creating one." },
-      { day: 4, topic: "Planning Your Website", activity: "Worksheet Activity: Students complete a planning worksheet to outline the pages and content for their personal website." },
-      { day: 5, topic: "Content Gathering", activity: "Independent Work: Students begin writing and gathering content for their 'About Me' page and other sections." }
+      { day: 1, topic: "What is AI? & Digital Citizenship", activity: "Icebreaker: 'AI in My Life' discussion. Students explore their digital footprint and discuss online safety." },
+      { day: 2, topic: "Introduction to Personal Portfolios & Planning", activity: "Review portfolio examples and complete website planning worksheet. Begin content gathering." },
+      { day: 3, topic: "The Art of AI Prompting", activity: "Interactive lesson on effective prompting. Students practice with AI text generators to create 'About Me' bios." },
+      { day: 4, topic: "Prompting for Images & Refining Techniques", activity: "Creative lab: Create personal logos/banners with AI. 'Prompt Golf' challenge to refine skills." },
+      { day: 5, topic: "AI Ethics & Bias Discussion", activity: "Group discussion on ethical implications of AI, bias in algorithms, and responsible AI use." }
     ]
   },
   {
     week: 2,
-    title: "Mastering AI Prompting",
-    objective: "Students will develop the skills to write effective prompts for AI systems to generate text, images, and website design elements.",
+    title: "Building Your Complete Portfolio Website",
+    objective: "Students will use an AI website builder to create their complete portfolio website, including all content pages, multimedia, and initial customization.",
     days: [
-      { day: 1, topic: "The Art of the Prompt", activity: "Interactive Lesson: Introduction to the principles of effective AI prompting, including being specific, providing context, and iterating." },
-      { day: 2, topic: "Prompting for Text", activity: "Hands-On Activity: Students use an AI text generator to create different versions of their 'About Me' bio." },
-      { day: 3, topic: "Prompting for Images", activity: "Creative Lab: Students use an AI image generator to create a personal logo or banner for their website." },
-      { day: 4, topic: "Refining Prompts", activity: "'Prompt Golf' Challenge: Students compete to achieve a specific AI output using the fewest and most effective words." },
-      { day: 5, topic: "AI Ethics & Bias", activity: "Group Discussion: A guided conversation about the ethical implications of AI, including bias in algorithms." }
+      { day: 1, topic: "Intro to Lovable AI & Building Foundation", activity: "Live demo of Lovable AI. Students generate home page, navigation, and 'About Me' page." },
+      { day: 2, topic: "Projects, Achievements & Volunteer Pages", activity: "Students create pages showcasing school projects, awards, volunteer work, and gather content." },
+      { day: 3, topic: "Sports Pages & Working with Multimedia", activity: "Create sports/activities pages. Technical lab on uploading and embedding images and videos." },
+      { day: 4, topic: "Social Media Integration & Peer Feedback", activity: "Discussion on professional social media linking. Gallery walk for peer feedback on websites." },
+      { day: 5, topic: "Customizing with AI", activity: "Design studio: Use AI prompts to customize colors, fonts, and layouts to reflect personal style." }
     ]
   },
   {
     week: 3,
-    title: "Building Your Personal Website with AI",
-    objective: "Students will use an AI website builder to create the structure of their personal portfolio website and populate it with their initial content.",
+    title: "Finalization, Management & Presentation",
+    objective: "Students will finalize their websites, learn website management concepts, and present their completed portfolios to the class.",
     days: [
-      { day: 1, topic: "Intro to Lovable AI", activity: "Live Demonstration: Instructor demonstrates how to use Lovable AI to create a basic website structure." },
-      { day: 2, topic: "Building the Foundation", activity: "Hands-On Workshop: Students use their website plan and prompts to generate the home page and main navigation." },
-      { day: 3, topic: "Creating the 'About Me' Page", activity: "Guided Practice: Students create their 'About Me' page, adding the text they generated in Week 2 and an image." },
-      { day: 4, topic: "Showcasing Projects & Achievements", activity: "Independent Work: Students create a dedicated page to showcase their school projects, awards, and achievements." },
-      { day: 5, topic: "Peer Feedback Session", activity: "Gallery Walk: Students share their progress and provide constructive feedback to their peers." }
-    ]
-  },
-  {
-    week: 4,
-    title: "Adding Content & Customization",
-    objective: "Students will add more content to their websites, including multimedia, and learn how to customize the design and layout.",
-    days: [
-      { day: 1, topic: "Volunteer & Sports Pages", activity: "Content Creation Day: Students create new pages for their volunteer work, sports, or other extracurricular activities." },
-      { day: 2, topic: "Working with Multimedia", activity: "Technical Lab: Students learn how to upload and embed images and videos into their website." },
-      { day: 3, topic: "Social Media Integration", activity: "Best Practices Discussion: A conversation about how to professionally and safely link to social media profiles." },
-      { day: 4, topic: "Customizing with AI", activity: "Design Studio: Students use AI prompts to change the colors, fonts, and layout of their website." },
-      { day: 5, topic: "Final Content Review", activity: "Checklist Activity: Students use a checklist to ensure all required content is on their website and proofread for errors." }
-    ]
-  },
-  {
-    week: 5,
-    title: "Website Management & Presentation",
-    objective: "Students will learn how to manage and update their websites, and they will present their final portfolio to the class.",
-    days: [
-      { day: 1, topic: "Website Management 101", activity: "Lesson: Introduction to basic website management concepts, including updating content and the role of hosting." },
-      { day: 2, topic: "Editing with AI", activity: "'Website Makeover' Activity: Students are given a scenario and must use the AI editor to update their site accordingly." },
-      { day: 3, topic: "Presentation Prep", activity: "Workshop: Students prepare a short presentation about their website, highlighting their favorite page." },
-      { day: 4, topic: "Portfolio Showcase Day 1", activity: "Presentations: Half of the students present their websites to the class." },
-      { day: 5, topic: "Portfolio Showcase Day 2 & Wrap-up", activity: "Presentations & Celebration: The remaining students present their websites, followed by a course wrap-up." }
+      { day: 1, topic: "Final Content Review & Website Management", activity: "Checklist review of all content. Introduction to website management, updating content, and hosting concepts." },
+      { day: 2, topic: "Editing with AI & Final Polish", activity: "'Website Makeover' activity: Update sites based on scenarios. Final proofreading and quality checks." },
+      { day: 3, topic: "Presentation Preparation", activity: "Workshop: Students prepare 3-5 minute presentations about their websites and key learnings." },
+      { day: 4, topic: "Portfolio Showcase Day 1", activity: "Presentations: Half of the students present their websites to the class with Q&A." },
+      { day: 5, topic: "Portfolio Showcase Day 2 & Celebration", activity: "Final presentations and course wrap-up. Celebration of accomplishments and reflection on learning." }
     ]
   }
 ];
@@ -108,13 +84,13 @@ export default function WeeklySchedule() {
         </Link>
 
         <div className="max-w-6xl mx-auto">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">5-Week Schedule</h1>
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">3-Week Intensive Schedule</h1>
           <p className="text-xl text-gray-300 mb-12">
-            Detailed daily objectives and activities for each week of the program
+            Accelerated daily objectives and activities for the condensed program
           </p>
 
           <Tabs defaultValue="week1" className="w-full">
-            <TabsList className="grid w-full grid-cols-5 bg-white/5 mb-8">
+            <TabsList className="grid w-full grid-cols-3 bg-white/5 mb-8">
               {weekData.map((week) => (
                 <TabsTrigger
                   key={week.week}

@@ -46,7 +46,7 @@ export default function CourseOverview() {
         <div className="max-w-5xl mx-auto">
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">Course Overview</h1>
           <p className="text-xl text-gray-300 mb-12">
-            A comprehensive introduction to AI and website development for rising 8th graders
+            An intensive 3-week introduction to AI and website development for rising 8th graders
           </p>
 
           {/* Course Goals */}
@@ -60,7 +60,7 @@ export default function CourseOverview() {
               </CardHeader>
               <CardContent className="space-y-4">
                 <p className="text-gray-300">
-                  Upon successful completion of this course, students will have achieved the following goals:
+                  Upon successful completion of this intensive 3-week course, students will have achieved the following goals:
                 </p>
                 <div className="grid md:grid-cols-2 gap-4">
                   <div className="flex gap-3">
@@ -110,7 +110,7 @@ export default function CourseOverview() {
             <Card className="bg-white/5 border-white/10 backdrop-blur-sm">
               <CardContent className="pt-6">
                 <p className="text-gray-300 mb-6">
-                  By the end of this 5-week course, students will be able to:
+                  By the end of this 3-week intensive course, students will be able to:
                 </p>
                 <div className="space-y-3">
                   {[

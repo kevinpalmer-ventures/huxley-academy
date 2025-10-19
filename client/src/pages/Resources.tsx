@@ -242,31 +242,31 @@ export default function Resources() {
           <section className="mb-12">
             <Card className="bg-gradient-to-br from-purple-900/50 to-pink-900/50 border-white/10">
               <CardHeader>
-                <CardTitle className="text-2xl text-white">Instructor Tips</CardTitle>
+                <CardTitle className="text-2xl text-white">Instructor Tips for 3-Week Format</CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
                 <div>
-                  <h4 className="text-white font-semibold mb-2">Emphasize Iteration</h4>
+                  <h4 className="text-white font-semibold mb-2">Maintain Momentum</h4>
                   <p className="text-gray-300 text-sm">
-                    Throughout the course, emphasize that creating a website (and using AI) is an iterative process. Students should not expect to get everything perfect on the first try.
+                    The accelerated format requires maintaining high energy and momentum. Keep activities engaging and provide clear daily objectives.
                   </p>
                 </div>
                 <div>
-                  <h4 className="text-white font-semibold mb-2">Provide Individualized Support</h4>
+                  <h4 className="text-white font-semibold mb-2">Assign Homework</h4>
                   <p className="text-gray-300 text-sm">
-                    Students will have varying levels of technical skills and comfort with AI. Be prepared to provide individualized support and differentiate instruction as needed.
+                    Students will need to complete some content gathering and website work outside of class time. Set clear expectations for homework.
                   </p>
                 </div>
                 <div>
-                  <h4 className="text-white font-semibold mb-2">Foster a Collaborative Environment</h4>
+                  <h4 className="text-white font-semibold mb-2">Provide Extra Support</h4>
                   <p className="text-gray-300 text-sm">
-                    Encourage students to help each other and share their knowledge. Peer learning can be a powerful tool in this type of course.
+                    Be available for extra help sessions or virtual office hours, as the faster pace may challenge some students.
                   </p>
                 </div>
                 <div>
-                  <h4 className="text-white font-semibold mb-2">Celebrate Creativity</h4>
+                  <h4 className="text-white font-semibold mb-2">Celebrate Progress</h4>
                   <p className="text-gray-300 text-sm">
-                    There is no single "right" way to create a portfolio website. Encourage students to be creative and express their individuality through their design and content choices.
+                    Acknowledge milestones frequently to keep students motivated throughout the intensive program.
                   </p>
                 </div>
               </CardContent>
@@ -288,7 +288,7 @@ export default function Resources() {
       <footer className="border-t border-white/10 bg-black/20 backdrop-blur-sm mt-20">
         <div className="container mx-auto px-4 py-8">
           <div className="text-center text-gray-400">
-            <p className="mb-2">5-Week STEM Course: AI & Personal Website Development</p>
+            <p className="mb-2">3-Week STEM Course: AI & Personal Website Development</p>
             <p className="text-sm">Designed for Rising 8th Graders | Wake County, NC</p>
             <p className="text-xs mt-4">Created by Manus AI | October 2025</p>
           </div>
