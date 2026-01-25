@@ -163,7 +163,7 @@ export default function Home() {
           <div className="text-center text-gray-400">
             <p className="mb-2">3-Week STEM Course: AI & Personal Website Development</p>
             <p className="text-sm">Designed for Rising 8th Graders | Wake County, NC</p>
-            <p className="text-xs mt-4">Created by Manus AI | October 2025</p>
+
           </div>
         </div>
       </footer>
