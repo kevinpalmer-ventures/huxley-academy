@@ -39,10 +39,23 @@ export default function Home() {
 
       {/* Philosophy Section */}
       <section className="container mx-auto px-4 py-20 bg-black/20">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-12">The Huxley Philosophy</h2>
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="text-left space-y-6">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
+            <div className="relative group order-2 md:order-1">
+              <div className="absolute -inset-1 bg-gradient-to-r from-purple-600 to-blue-600 rounded-xl blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200" />
+              <div className="relative rounded-xl overflow-hidden border border-white/10 shadow-2xl">
+                <img 
+                  src="https://private-us-east-1.manuscdn.com/sessionFile/KfP4P5a6iu2gCPsf4a9nwg/sandbox/sndNfMqp1ViCsH6a6cxUzL-img-1_1770846038000_na1fn_c3R1ZGVudHNfY29sbGFib3JhdGluZw.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvS2ZQNFA1YTZpdTJnQ1BzZjRhOW53Zy9zYW5kYm94L3NuZE5mTXFwMVZpQ3NINmE2Y3hVekwtaW1nLTFfMTc3MDg0NjAzODAwMF9uYTFmbl9jM1IxWkdWdWRITmZZMjlzYkdGaWIzSmhkR2x1WncucG5nP3gtb3NzLXByb2Nlc3M9aW1hZ2UvcmVzaXplLHdfMTkyMCxoXzE5MjAvZm9ybWF0LHdlYnAvcXVhbGl0eSxxXzgwIiwiQ29uZGl0aW9uIjp7IkRhdGVMZXNzVGhhbiI6eyJBV1M6RXBvY2hUaW1lIjoxNzk4NzYxNjAwfX19XX0_&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=dFgxeenB8BQrSLwpWHw~AZYRdzInwKbuUwuIXEKXipRAR7vFV9zHaL906rANOWLfZL3wMIBOhTM3EDX0cq6LumxDxs5IR2cheiR6ZoRv5Q5rwQcdIVDksVNXHb989RgF5CxC8b~ItEyeERDfJK818bJOgShJjuZ7Xc4XCoxrCrImyK~5yo7MZ~55Cq4ZexFqahbLsgJVkhn1Bd9v~qfJ~JA5bw3Un~Xih9J7QzNKmFwUIpgjiEkN9I5xp3JHOQGouGm1euQLSAcQ25mxPPp1CMnAEwZVhDDonX2GypdKrYWR2kpoMNCn6GIEVTQoCxu4B-MN6oFmdtKD7un1L6KcmQ__" 
+                  alt="Students collaborating in a modern AI classroom" 
+                  className="w-full h-auto object-cover transform transition duration-500 hover:scale-105"
+                />
+                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6">
+                  <p className="text-white font-medium">Collaborative Learning Environment</p>
+                </div>
+              </div>
+            </div>
+            <div className="text-left space-y-6 order-1 md:order-2">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">The Huxley Philosophy</h2>
               <p className="text-xl text-gray-300 leading-relaxed">
                 "History shows that powerful inventions can either distract a generation — or empower it. 
                 Artificial intelligence is no different."
@@ -52,24 +65,25 @@ export default function Home() {
                 a research assistant, a creative partner, and a problem-solving tool.
               </p>
             </div>
-            <div className="grid grid-cols-2 gap-4">
-              <Card className="bg-white/5 border-white/10 backdrop-blur-sm p-4 text-center hover:bg-white/10 transition-colors">
-                <Brain className="h-8 w-8 text-purple-400 mx-auto mb-3" />
-                <h3 className="text-white font-semibold">Scientific Instrument</h3>
-              </Card>
-              <Card className="bg-white/5 border-white/10 backdrop-blur-sm p-4 text-center hover:bg-white/10 transition-colors">
-                <BookOpen className="h-8 w-8 text-blue-400 mx-auto mb-3" />
-                <h3 className="text-white font-semibold">Research Assistant</h3>
-              </Card>
-              <Card className="bg-white/5 border-white/10 backdrop-blur-sm p-4 text-center hover:bg-white/10 transition-colors">
-                <Lightbulb className="h-8 w-8 text-yellow-400 mx-auto mb-3" />
-                <h3 className="text-white font-semibold">Creative Partner</h3>
-              </Card>
-              <Card className="bg-white/5 border-white/10 backdrop-blur-sm p-4 text-center hover:bg-white/10 transition-colors">
-                <Rocket className="h-8 w-8 text-pink-400 mx-auto mb-3" />
-                <h3 className="text-white font-semibold">Problem Solver</h3>
-              </Card>
-            </div>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <Card className="bg-white/5 border-white/10 backdrop-blur-sm p-4 text-center hover:bg-white/10 transition-colors">
+              <Brain className="h-8 w-8 text-purple-400 mx-auto mb-3" />
+              <h3 className="text-white font-semibold">Scientific Instrument</h3>
+            </Card>
+            <Card className="bg-white/5 border-white/10 backdrop-blur-sm p-4 text-center hover:bg-white/10 transition-colors">
+              <BookOpen className="h-8 w-8 text-blue-400 mx-auto mb-3" />
+              <h3 className="text-white font-semibold">Research Assistant</h3>
+            </Card>
+            <Card className="bg-white/5 border-white/10 backdrop-blur-sm p-4 text-center hover:bg-white/10 transition-colors">
+              <Lightbulb className="h-8 w-8 text-yellow-400 mx-auto mb-3" />
+              <h3 className="text-white font-semibold">Creative Partner</h3>
+            </Card>
+            <Card className="bg-white/5 border-white/10 backdrop-blur-sm p-4 text-center hover:bg-white/10 transition-colors">
+              <Rocket className="h-8 w-8 text-pink-400 mx-auto mb-3" />
+              <h3 className="text-white font-semibold">Problem Solver</h3>
+            </Card>
           </div>
         </div>
       </section>

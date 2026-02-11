@@ -55,6 +55,18 @@ export default function About() {
             {/* Section 2: Refusing Passive Technology */}
             <section>
               <h2 className="text-3xl font-bold text-white mb-8 text-center">We Refuse Passive Technology</h2>
+              
+              <div className="mb-12 relative rounded-xl overflow-hidden border border-white/10 shadow-2xl">
+                <img 
+                  src="https://private-us-east-1.manuscdn.com/sessionFile/KfP4P5a6iu2gCPsf4a9nwg/sandbox/sndNfMqp1ViCsH6a6cxUzL-img-2_1770846046000_na1fn_dGVhY2hlcl9ndWlkaW5n.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvS2ZQNFA1YTZpdTJnQ1BzZjRhOW53Zy9zYW5kYm94L3NuZE5mTXFwMVZpQ3NINmE2Y3hVekwtaW1nLTJfMTc3MDg0NjA0NjAwMF9uYTFmbl9kR1ZoWTJobGNsOW5kV2xrYVc1bi5wbmc~eC1vc3MtcHJvY2Vzcz1pbWFnZS9yZXNpemUsd18xOTIwLGhfMTkyMC9mb3JtYXQsd2VicC9xdWFsaXR5LHFfODAiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3OTg3NjE2MDB9fX1dfQ__&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=Ut8XIOAj4Vuyxk2XgrARuyYJtF1~Z17P52ug3pgIROKatxlD00BHeMfIlzGSwtTae1kPx3dY6uIbteOaQXt9baS2-Pa7LkMYdrbAnNMxh4zA6RRiTYngw18euESN5NemdeZ4Edd9-2oUr6aPS5rNMgw350klHuBy04Cd7uFHVRhYmerE8ZlgiboAto7r1Bg7ufpDgF48BlVghNd47geb~iq4bdfKVNXUFyf~NSklDkM0D4qPDMxqGp~1aGh96YhCUV1zXECoInuucjk3bc8Ka4tX49kthezcDlTSQd5BWydStPya7bwwxqf1qvjo7ofketnifVjrFIOSI5UC4hd6Fw__" 
+                  alt="Teacher guiding student in AI concepts" 
+                  className="w-full h-[400px] object-cover"
+                />
+                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 to-transparent p-6">
+                  <p className="text-white text-lg italic text-center">"Mentorship is the bridge between information and wisdom."</p>
+                </div>
+              </div>
+
               <div className="grid md:grid-cols-2 gap-6">
                 <Card className="bg-white/5 border-white/10 backdrop-blur-sm hover:bg-white/10 transition-colors">
                   <CardContent className="p-8 text-center">
