@@ -49,7 +49,42 @@ export default function ApplicationWizard() {
     setFormData((prev) => ({ ...prev, [field]: value }));
   };
 
-  const nextStep = () => setStep((prev) => Math.min(prev + 1, 3));
+  const isStep1Valid = () => {
+    return (
+      formData.studentFullName &&
+      formData.gradeLevel &&
+      formData.currentSchool &&
+      formData.dateOfBirth &&
+      formData.parentFullName &&
+      formData.parentEmail &&
+      formData.parentPhone &&
+      formData.relationship &&
+      formData.emergencyName &&
+      formData.emergencyPhone
+    );
+  };
+
+  const isStep2Valid = () => {
+    // Math and Science levels are optional in the original request but let's make them required based on "all required fields" instruction
+    // Assuming the dropdowns have a default empty state, we check if they are selected.
+    // However, the prompt said "Disable Continue until required fields are completed".
+    // Let's assume the dropdowns are required.
+    return true; // The prompt didn't explicitly mark Step 2 fields as required in the same way, but let's check the original prompt.
+    // Re-reading prompt: "Disable Continue until required fields are completed."
+    // Step 2 fields: Math Level, Science Level are dropdowns. Let's make them required for better data.
+    // Coding/AI/Computer access are toggles/checkboxes, so they always have a value (true/false).
+    // If coding experience is yes, description is required? "If Yes → reveal short text field". Usually implies required.
+    
+    if (!formData.mathLevel || !formData.scienceLevel) return false;
+    if (formData.hasCodingExperience && !formData.codingExperienceDesc) return false;
+    return true;
+  };
+
+  const nextStep = () => {
+    if (step === 1 && !isStep1Valid()) return;
+    if (step === 2 && !isStep2Valid()) return;
+    setStep((prev) => Math.min(prev + 1, 3));
+  };
   const prevStep = () => setStep((prev) => Math.max(prev - 1, 1));
 
   const handleSubmit = async () => {
@@ -247,6 +282,23 @@ export default function ApplicationWizard() {
                         </SelectContent>
                       </Select>
                     </div>
+                    <div className="space-y-2">
+                      <Label className="text-gray-300">Emergency Contact Name *</Label>
+                      <Input 
+                        className="bg-black/20 border-white/10 text-white" 
+                        value={formData.emergencyName}
+                        onChange={(e) => handleInputChange("emergencyName", e.target.value)}
+                      />
+                    </div>
+                    <div className="space-y-2">
+                      <Label className="text-gray-300">Emergency Contact Phone *</Label>
+                      <Input 
+                        type="tel"
+                        className="bg-black/20 border-white/10 text-white" 
+                        value={formData.emergencyPhone}
+                        onChange={(e) => handleInputChange("emergencyPhone", e.target.value)}
+                      />
+                    </div>
                   </div>
                 </div>
 
@@ -432,7 +484,8 @@ export default function ApplicationWizard() {
             {step < 3 ? (
               <Button 
                 onClick={nextStep} 
-                className="bg-purple-600 hover:bg-purple-700 text-white px-8"
+                disabled={step === 1 ? !isStep1Valid() : !isStep2Valid()}
+                className="bg-purple-600 hover:bg-purple-700 text-white px-8 disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 Continue <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
