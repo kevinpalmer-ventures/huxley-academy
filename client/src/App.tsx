@@ -11,21 +11,26 @@ import ParentsInvestors from "./pages/ParentsInvestors";
 import SchoolsPTOs from "./pages/SchoolsPTOs";
 import Enrollment from "./pages/Enrollment";
 import Contact from "./pages/Contact";
+import ThreeWeekStem from "./pages/ThreeWeekStem";
+import Layout from "./components/Layout";
 
 function Router() {
   return (
-    <Switch>
-      <Route path={"/"} component={Home} />
-      <Route path={"/about"} component={About} />
-      <Route path={"/curriculum"} component={Curriculum} />
-      <Route path={"/parents-investors"} component={ParentsInvestors} />
-      <Route path={"/schools-ptos"} component={SchoolsPTOs} />
-      <Route path={"/enrollment"} component={Enrollment} />
-      <Route path={"/contact"} component={Contact} />
-      <Route path={"/404"} component={NotFound} />
-      {/* Final fallback route */}
-      <Route component={NotFound} />
-    </Switch>
+    <Layout>
+      <Switch>
+        <Route path={"/"} component={Home} />
+        <Route path={"/about"} component={About} />
+        <Route path={"/curriculum"} component={Curriculum} />
+        <Route path={"/programs/3-week-stem"} component={ThreeWeekStem} />
+        <Route path={"/parents-investors"} component={ParentsInvestors} />
+        <Route path={"/schools-ptos"} component={SchoolsPTOs} />
+        <Route path={"/enrollment"} component={Enrollment} />
+        <Route path={"/contact"} component={Contact} />
+        <Route path={"/404"} component={NotFound} />
+        {/* Final fallback route */}
+        <Route component={NotFound} />
+      </Switch>
+    </Layout>
   );
 }
 

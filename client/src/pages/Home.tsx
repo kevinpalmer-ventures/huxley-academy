@@ -1,40 +1,11 @@
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Link } from "wouter";
 import { BookOpen, Lightbulb, Users, Brain, Rocket, Shield } from "lucide-react";
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      {/* Navigation */}
-      <nav className="border-b border-white/10 bg-black/20 backdrop-blur-sm sticky top-0 z-50">
-        <div className="container mx-auto px-4 py-4">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-2">
-              <Brain className="h-8 w-8 text-purple-400" />
-              <span className="text-xl font-bold text-white tracking-tight">Huxley Academy</span>
-            </div>
-            <div className="hidden md:flex gap-4">
-              <Link href="/about">
-                <Button variant="ghost" className="text-white hover:text-purple-300">About</Button>
-              </Link>
-              <Link href="/curriculum">
-                <Button variant="ghost" className="text-white hover:text-purple-300">Curriculum</Button>
-              </Link>
-              <Link href="/parents-investors">
-                <Button variant="ghost" className="text-white hover:text-purple-300">Parents</Button>
-              </Link>
-              <Link href="/schools-ptos">
-                <Button variant="ghost" className="text-white hover:text-purple-300">Schools</Button>
-              </Link>
-              <Link href="/enrollment">
-                <Button className="bg-purple-600 hover:bg-purple-700 text-white">Apply Now</Button>
-              </Link>
-            </div>
-          </div>
-        </div>
-      </nav>
-
       {/* Hero Section */}
       <section className="container mx-auto px-4 py-24 md:py-32">
         <div className="max-w-5xl mx-auto text-center">
@@ -178,42 +149,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      {/* Footer */}
-      <footer className="border-t border-white/10 bg-black/40 backdrop-blur-sm mt-20">
-        <div className="container mx-auto px-4 py-12">
-          <div className="grid md:grid-cols-4 gap-8 mb-8">
-            <div className="col-span-1 md:col-span-2">
-              <div className="flex items-center gap-2 mb-4">
-                <Brain className="h-6 w-6 text-purple-400" />
-                <span className="text-xl font-bold text-white">Huxley Academy</span>
-              </div>
-              <p className="text-gray-400 max-w-sm">
-                Preparing middle school students to use artificial intelligence as an extension of science, society, and human freedom.
-              </p>
-            </div>
-            <div>
-              <h4 className="text-white font-semibold mb-4">Programs</h4>
-              <ul className="space-y-2 text-gray-400">
-                <li><Link href="/curriculum" className="hover:text-purple-300">Curriculum</Link></li>
-                <li><Link href="/schools-ptos" className="hover:text-purple-300">For Schools</Link></li>
-                <li><Link href="/enrollment" className="hover:text-purple-300">Enrollment</Link></li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="text-white font-semibold mb-4">Connect</h4>
-              <ul className="space-y-2 text-gray-400">
-                <li><Link href="/about" className="hover:text-purple-300">About Us</Link></li>
-                <li><Link href="/parents-investors" className="hover:text-purple-300">Parents & Investors</Link></li>
-                <li><Link href="/contact" className="hover:text-purple-300">Contact</Link></li>
-              </ul>
-            </div>
-          </div>
-          <div className="border-t border-white/10 pt-8 text-center text-gray-500 text-sm">
-            <p>&copy; {new Date().getFullYear()} Huxley Academy. AI Literacy Starts Here.</p>
-          </div>
-        </div>
-      </footer>
     </div>
   );
 }

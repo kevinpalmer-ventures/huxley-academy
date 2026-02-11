@@ -6,28 +6,7 @@ import { ArrowLeft, Brain, Mail, MapPin, Phone } from "lucide-react";
 export default function Contact() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      {/* Navigation */}
-      <nav className="border-b border-white/10 bg-black/20 backdrop-blur-sm sticky top-0 z-50">
-        <div className="container mx-auto px-4 py-4">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-2">
-              <Brain className="h-8 w-8 text-purple-400" />
-              <span className="text-xl font-bold text-white tracking-tight">Huxley Academy</span>
-            </div>
-            <div className="hidden md:flex gap-4">
-              <Link href="/">
-                <Button variant="ghost" className="text-white hover:text-purple-300">Home</Button>
-              </Link>
-              <Link href="/about">
-                <Button variant="ghost" className="text-white hover:text-purple-300">About</Button>
-              </Link>
-              <Link href="/enrollment">
-                <Button className="bg-purple-600 hover:bg-purple-700 text-white">Apply Now</Button>
-              </Link>
-            </div>
-          </div>
-        </div>
-      </nav>
+
 
       <div className="container mx-auto px-4 py-12">
         <Link href="/">
@@ -102,12 +81,7 @@ export default function Contact() {
         </div>
       </div>
 
-      {/* Footer */}
-      <footer className="border-t border-white/10 bg-black/40 backdrop-blur-sm mt-20">
-        <div className="container mx-auto px-4 py-12 text-center">
-          <p className="text-gray-500 text-sm">&copy; {new Date().getFullYear()} Huxley Academy. AI Literacy Starts Here.</p>
-        </div>
-      </footer>
+
     </div>
   );
 }
