@@ -12,6 +12,7 @@ import SchoolsPTOs from "./pages/SchoolsPTOs";
 import Enrollment from "./pages/Enrollment";
 import Contact from "./pages/Contact";
 import ThreeWeekStem from "./pages/ThreeWeekStem";
+import ApplicationWizard from "./pages/ApplicationWizard";
 import Layout from "./components/Layout";
 
 function Router() {
@@ -26,6 +27,7 @@ function Router() {
         <Route path={"/schools-ptos"} component={SchoolsPTOs} />
         <Route path={"/enrollment"} component={Enrollment} />
         <Route path={"/contact"} component={Contact} />
+        <Route path={"/apply"} component={ApplicationWizard} />
         <Route path={"/404"} component={NotFound} />
         {/* Final fallback route */}
         <Route component={NotFound} />

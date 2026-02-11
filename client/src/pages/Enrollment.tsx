@@ -95,9 +95,11 @@ export default function Enrollment() {
             <p className="text-gray-300 mb-8">
               Take the first step towards AI literacy. The application takes about 10 minutes to complete.
             </p>
-            <Button size="lg" className="bg-purple-600 hover:bg-purple-700 text-white px-12 py-6 text-xl w-full md:w-auto">
-              Start Application
-            </Button>
+            <Link href="/apply">
+              <Button size="lg" className="bg-purple-600 hover:bg-purple-700 text-white px-12 py-6 text-xl w-full md:w-auto">
+                Start Application
+              </Button>
+            </Link>
             <p className="text-gray-500 text-sm mt-4">
               Questions? Email admissions@huxleyacademy.com
             </p>

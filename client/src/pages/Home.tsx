@@ -28,7 +28,7 @@ export default function Home() {
                 Explore the Curriculum
               </Button>
             </Link>
-            <Link href="/enrollment">
+            <Link href="/apply">
               <Button size="lg" variant="outline" className="border-purple-400 text-purple-300 hover:bg-purple-950 h-14 px-8 text-lg">
                 Apply to Huxley Academy
               </Button>
