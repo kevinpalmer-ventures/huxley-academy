@@ -14,10 +14,12 @@ import Contact from "./pages/Contact";
 import ThreeWeekStem from "./pages/ThreeWeekStem";
 import ApplicationWizard from "./pages/ApplicationWizard";
 import Layout from "./components/Layout";
+import ScrollToTop from "./components/ScrollToTop";
 
 function Router() {
   return (
     <Layout>
+      <ScrollToTop />
       <Switch>
         <Route path={"/"} component={Home} />
         <Route path={"/about"} component={About} />
