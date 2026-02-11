@@ -5,17 +5,23 @@ import { Route, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
-import CourseOverview from "./pages/CourseOverview";
-import WeeklySchedule from "./pages/WeeklySchedule";
-import Resources from "./pages/Resources";
+import About from "./pages/About";
+import Curriculum from "./pages/Curriculum";
+import ParentsInvestors from "./pages/ParentsInvestors";
+import SchoolsPTOs from "./pages/SchoolsPTOs";
+import Enrollment from "./pages/Enrollment";
+import Contact from "./pages/Contact";
 
 function Router() {
   return (
     <Switch>
       <Route path={"/"} component={Home} />
-      <Route path={"/overview"} component={CourseOverview} />
-      <Route path={"/schedule"} component={WeeklySchedule} />
-      <Route path={"/resources"} component={Resources} />
+      <Route path={"/about"} component={About} />
+      <Route path={"/curriculum"} component={Curriculum} />
+      <Route path={"/parents-investors"} component={ParentsInvestors} />
+      <Route path={"/schools-ptos"} component={SchoolsPTOs} />
+      <Route path={"/enrollment"} component={Enrollment} />
+      <Route path={"/contact"} component={Contact} />
       <Route path={"/404"} component={NotFound} />
       {/* Final fallback route */}
       <Route component={NotFound} />

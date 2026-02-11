@@ -1,34 +1,34 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Link } from "wouter";
-import { BookOpen, Calendar, Lightbulb, Users } from "lucide-react";
+import { BookOpen, Lightbulb, Users, Brain, Rocket, Shield } from "lucide-react";
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Navigation */}
-      <nav className="border-b border-white/10 bg-black/20 backdrop-blur-sm">
+      <nav className="border-b border-white/10 bg-black/20 backdrop-blur-sm sticky top-0 z-50">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">
-              <Lightbulb className="h-8 w-8 text-purple-400" />
-              <span className="text-xl font-bold text-white">STEM AI Course</span>
+              <Brain className="h-8 w-8 text-purple-400" />
+              <span className="text-xl font-bold text-white tracking-tight">Huxley Academy</span>
             </div>
-            <div className="flex gap-4">
-              <Link href="/overview">
-                <Button variant="ghost" className="text-white hover:text-purple-300">
-                  Overview
-                </Button>
+            <div className="hidden md:flex gap-4">
+              <Link href="/about">
+                <Button variant="ghost" className="text-white hover:text-purple-300">About</Button>
               </Link>
-              <Link href="/schedule">
-                <Button variant="ghost" className="text-white hover:text-purple-300">
-                  Schedule
-                </Button>
+              <Link href="/curriculum">
+                <Button variant="ghost" className="text-white hover:text-purple-300">Curriculum</Button>
               </Link>
-              <Link href="/resources">
-                <Button variant="ghost" className="text-white hover:text-purple-300">
-                  Resources
-                </Button>
+              <Link href="/parents-investors">
+                <Button variant="ghost" className="text-white hover:text-purple-300">Parents</Button>
+              </Link>
+              <Link href="/schools-ptos">
+                <Button variant="ghost" className="text-white hover:text-purple-300">Schools</Button>
+              </Link>
+              <Link href="/enrollment">
+                <Button className="bg-purple-600 hover:bg-purple-700 text-white">Apply Now</Button>
               </Link>
             </div>
           </div>
@@ -36,106 +36,118 @@ export default function Home() {
       </nav>
 
       {/* Hero Section */}
-      <section className="container mx-auto px-4 py-20">
-        <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-            3-Week STEM Course
+      <section className="container mx-auto px-4 py-24 md:py-32">
+        <div className="max-w-5xl mx-auto text-center">
+          <div className="inline-block mb-6 px-4 py-1.5 rounded-full bg-purple-900/30 border border-purple-500/30 text-purple-300 text-sm font-medium">
+            AI Literacy Starts Here
+          </div>
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-8 leading-tight">
+            Don’t Just Use Technology.<br />
+            <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Understand It. Build It.</span><br />
+            Improve the World With It.
           </h1>
-          <h2 className="text-3xl md:text-4xl font-semibold text-white mb-8">
-            AI & Personal Website Development
-          </h2>
-          <p className="text-xl text-gray-300 mb-12 leading-relaxed">
-            An intensive summer program for rising 8th graders to learn Artificial Intelligence 
-            and build their own portfolio websites using cutting-edge AI tools in just 3 weeks.
+          <p className="text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed max-w-3xl mx-auto">
+            Huxley Academy is a foundational AI literacy school for middle school students. 
+            We teach students how artificial intelligence works — how to question it, shape it, 
+            and use it responsibly for science, creativity, and leadership.
           </p>
           <div className="flex gap-4 justify-center flex-wrap">
-            <Link href="/overview">
-              <Button size="lg" className="bg-purple-600 hover:bg-purple-700 text-white">
-                Explore Course
+            <Link href="/curriculum">
+              <Button size="lg" className="bg-purple-600 hover:bg-purple-700 text-white h-14 px-8 text-lg">
+                Explore the Curriculum
               </Button>
             </Link>
-            <Link href="/schedule">
-              <Button size="lg" variant="outline" className="border-purple-400 text-purple-300 hover:bg-purple-950">
-                View Schedule
+            <Link href="/enrollment">
+              <Button size="lg" variant="outline" className="border-purple-400 text-purple-300 hover:bg-purple-950 h-14 px-8 text-lg">
+                Apply to Huxley Academy
               </Button>
             </Link>
           </div>
         </div>
       </section>
 
-      {/* Key Features */}
-      <section className="container mx-auto px-4 py-16">
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-          <Card className="bg-white/5 border-white/10 backdrop-blur-sm">
-            <CardHeader>
-              <BookOpen className="h-10 w-10 text-purple-400 mb-2" />
-              <CardTitle className="text-white">Learn AI Fundamentals</CardTitle>
-              <CardDescription className="text-gray-400">
-                Master the art of AI prompting and understand how AI works in everyday life
-              </CardDescription>
-            </CardHeader>
-          </Card>
-
-          <Card className="bg-white/5 border-white/10 backdrop-blur-sm">
-            <CardHeader>
-              <Lightbulb className="h-10 w-10 text-pink-400 mb-2" />
-              <CardTitle className="text-white">Build with AI</CardTitle>
-              <CardDescription className="text-gray-400">
-                Create a professional portfolio website using Lovable AI without writing code
-              </CardDescription>
-            </CardHeader>
-          </Card>
-
-          <Card className="bg-white/5 border-white/10 backdrop-blur-sm">
-            <CardHeader>
-              <Calendar className="h-10 w-10 text-blue-400 mb-2" />
-              <CardTitle className="text-white">3-Week Intensive</CardTitle>
-              <CardDescription className="text-gray-400">
-                Fast-paced daily lessons with hands-on activities and peer collaboration
-              </CardDescription>
-            </CardHeader>
-          </Card>
-
-          <Card className="bg-white/5 border-white/10 backdrop-blur-sm">
-            <CardHeader>
-              <Users className="h-10 w-10 text-green-400 mb-2" />
-              <CardTitle className="text-white">Portfolio for Life</CardTitle>
-              <CardDescription className="text-gray-400">
-                Create a website you can manage and update throughout your high school career
-              </CardDescription>
-            </CardHeader>
-          </Card>
+      {/* Philosophy Section */}
+      <section className="container mx-auto px-4 py-20 bg-black/20">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-12">The Huxley Philosophy</h2>
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="text-left space-y-6">
+              <p className="text-xl text-gray-300 leading-relaxed">
+                "History shows that powerful inventions can either distract a generation — or empower it. 
+                Artificial intelligence is no different."
+              </p>
+              <p className="text-lg text-gray-400">
+                At Huxley Academy, we teach students to use AI not as a crutch, but as a scientific instrument, 
+                a research assistant, a creative partner, and a problem-solving tool.
+              </p>
+            </div>
+            <div className="grid grid-cols-2 gap-4">
+              <Card className="bg-white/5 border-white/10 backdrop-blur-sm p-4 text-center hover:bg-white/10 transition-colors">
+                <Brain className="h-8 w-8 text-purple-400 mx-auto mb-3" />
+                <h3 className="text-white font-semibold">Scientific Instrument</h3>
+              </Card>
+              <Card className="bg-white/5 border-white/10 backdrop-blur-sm p-4 text-center hover:bg-white/10 transition-colors">
+                <BookOpen className="h-8 w-8 text-blue-400 mx-auto mb-3" />
+                <h3 className="text-white font-semibold">Research Assistant</h3>
+              </Card>
+              <Card className="bg-white/5 border-white/10 backdrop-blur-sm p-4 text-center hover:bg-white/10 transition-colors">
+                <Lightbulb className="h-8 w-8 text-yellow-400 mx-auto mb-3" />
+                <h3 className="text-white font-semibold">Creative Partner</h3>
+              </Card>
+              <Card className="bg-white/5 border-white/10 backdrop-blur-sm p-4 text-center hover:bg-white/10 transition-colors">
+                <Rocket className="h-8 w-8 text-pink-400 mx-auto mb-3" />
+                <h3 className="text-white font-semibold">Problem Solver</h3>
+              </Card>
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* Course Highlights */}
-      <section className="container mx-auto px-4 py-16">
-        <div className="max-w-4xl mx-auto">
-          <h3 className="text-3xl font-bold text-white mb-8 text-center">What You'll Learn</h3>
-          <div className="grid md:grid-cols-3 gap-6">
-            <Card className="bg-gradient-to-br from-purple-900/50 to-pink-900/50 border-white/10">
+      {/* Differentiation Section */}
+      <section className="container mx-auto px-4 py-24">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">What Makes Huxley Academy Different</h2>
+            <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+              We are not a coding camp. We are not a chatbot tutorial. We are a literacy school for the AI age.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8">
+            <Card className="bg-gradient-to-br from-purple-900/20 to-blue-900/20 border-white/10 backdrop-blur-sm">
               <CardHeader>
-                <CardTitle className="text-white">Week 1</CardTitle>
-                <CardDescription className="text-gray-300">
-                  AI fundamentals, digital citizenship, and mastering AI prompting for text and images
+                <div className="h-12 w-12 rounded-lg bg-purple-500/20 flex items-center justify-center mb-4">
+                  <BookOpen className="h-6 w-6 text-purple-400" />
+                </div>
+                <CardTitle className="text-2xl text-white mb-2">A Literacy School</CardTitle>
+                <CardDescription className="text-gray-300 text-base leading-relaxed">
+                  Just as reading unlocked books and math unlocked engineering, AI literacy unlocks the future. 
+                  We treat AI fluency as a fundamental academic skill.
                 </CardDescription>
               </CardHeader>
             </Card>
 
-            <Card className="bg-gradient-to-br from-blue-900/50 to-purple-900/50 border-white/10">
+            <Card className="bg-gradient-to-br from-blue-900/20 to-cyan-900/20 border-white/10 backdrop-blur-sm">
               <CardHeader>
-                <CardTitle className="text-white">Week 2</CardTitle>
-                <CardDescription className="text-gray-300">
-                  Building your complete portfolio website with AI, adding all content pages and multimedia
+                <div className="h-12 w-12 rounded-lg bg-blue-500/20 flex items-center justify-center mb-4">
+                  <Shield className="h-6 w-6 text-blue-400" />
+                </div>
+                <CardTitle className="text-2xl text-white mb-2">Foundational Pathway</CardTitle>
+                <CardDescription className="text-gray-300 text-base leading-relaxed">
+                  We move beyond passive consumption to active creation. Students learn to understand systems, 
+                  question outputs, and build responsibly.
                 </CardDescription>
               </CardHeader>
             </Card>
 
-            <Card className="bg-gradient-to-br from-pink-900/50 to-purple-900/50 border-white/10">
+            <Card className="bg-gradient-to-br from-pink-900/20 to-purple-900/20 border-white/10 backdrop-blur-sm">
               <CardHeader>
-                <CardTitle className="text-white">Week 3</CardTitle>
-                <CardDescription className="text-gray-300">
-                  Customization, website management, and presenting your final portfolio project
+                <div className="h-12 w-12 rounded-lg bg-pink-500/20 flex items-center justify-center mb-4">
+                  <Users className="h-6 w-6 text-pink-400" />
+                </div>
+                <CardTitle className="text-2xl text-white mb-2">Future Preparation</CardTitle>
+                <CardDescription className="text-gray-300 text-base leading-relaxed">
+                  We prepare students for AI-shaped futures where technology expands freedom rather than replacing thinking.
                 </CardDescription>
               </CardHeader>
             </Card>
@@ -143,31 +155,65 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Final Project */}
-      <section className="container mx-auto px-4 py-16">
-        <div className="max-w-4xl mx-auto">
-          <Card className="bg-gradient-to-br from-green-900/50 to-blue-900/50 border-white/10">
-            <CardHeader>
-              <CardTitle className="text-2xl text-white text-center mb-2">Final Project</CardTitle>
-              <CardDescription className="text-gray-300 text-center text-base">
-                A complete portfolio website with About Me, Projects, Volunteer Work, and Sports pages
-              </CardDescription>
-            </CardHeader>
-          </Card>
+      {/* Who Was Huxley Section */}
+      <section className="container mx-auto px-4 py-20 border-t border-white/5">
+        <div className="max-w-4xl mx-auto bg-white/5 rounded-2xl p-8 md:p-12 border border-white/10">
+          <div className="flex flex-col md:flex-row gap-8 items-center">
+            <div className="flex-1">
+              <h3 className="text-2xl font-bold text-white mb-4">Why "Huxley"?</h3>
+              <p className="text-gray-300 mb-4 leading-relaxed">
+                Aldous Huxley, author of <em>Brave New World</em>, imagined a future where technology shaped society in powerful ways. 
+                He warned that people might become dependent on systems they didn't understand.
+              </p>
+              <p className="text-gray-300 leading-relaxed">
+                <strong>Huxley Academy chooses a different future.</strong> We replace passive consumption with active creation, 
+                blind trust with informed questioning, and dependency with literacy.
+              </p>
+            </div>
+            <div className="w-full md:w-1/3 flex justify-center">
+              <div className="w-32 h-32 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center opacity-80">
+                <span className="text-4xl font-serif text-white font-bold">H</span>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="border-t border-white/10 bg-black/20 backdrop-blur-sm mt-20">
-        <div className="container mx-auto px-4 py-8">
-          <div className="text-center text-gray-400">
-            <p className="mb-2">3-Week STEM Course: AI & Personal Website Development</p>
-            <p className="text-sm">Designed for Rising 8th Graders | Wake County, NC</p>
-
+      <footer className="border-t border-white/10 bg-black/40 backdrop-blur-sm mt-20">
+        <div className="container mx-auto px-4 py-12">
+          <div className="grid md:grid-cols-4 gap-8 mb-8">
+            <div className="col-span-1 md:col-span-2">
+              <div className="flex items-center gap-2 mb-4">
+                <Brain className="h-6 w-6 text-purple-400" />
+                <span className="text-xl font-bold text-white">Huxley Academy</span>
+              </div>
+              <p className="text-gray-400 max-w-sm">
+                Preparing middle school students to use artificial intelligence as an extension of science, society, and human freedom.
+              </p>
+            </div>
+            <div>
+              <h4 className="text-white font-semibold mb-4">Programs</h4>
+              <ul className="space-y-2 text-gray-400">
+                <li><Link href="/curriculum" className="hover:text-purple-300">Curriculum</Link></li>
+                <li><Link href="/schools-ptos" className="hover:text-purple-300">For Schools</Link></li>
+                <li><Link href="/enrollment" className="hover:text-purple-300">Enrollment</Link></li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="text-white font-semibold mb-4">Connect</h4>
+              <ul className="space-y-2 text-gray-400">
+                <li><Link href="/about" className="hover:text-purple-300">About Us</Link></li>
+                <li><Link href="/parents-investors" className="hover:text-purple-300">Parents & Investors</Link></li>
+                <li><Link href="/contact" className="hover:text-purple-300">Contact</Link></li>
+              </ul>
+            </div>
+          </div>
+          <div className="border-t border-white/10 pt-8 text-center text-gray-500 text-sm">
+            <p>&copy; {new Date().getFullYear()} Huxley Academy. AI Literacy Starts Here.</p>
           </div>
         </div>
       </footer>
     </div>
   );
 }
-
