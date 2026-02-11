@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Link } from "wouter";
-import { ArrowLeft, Brain, Code, Cpu, Layers, Award, CheckCircle } from "lucide-react";
+import { ArrowLeft, Brain, Code, Cpu, Layers, Award, CheckCircle, Download } from "lucide-react";
 
 export default function Curriculum() {
   const levels = [
@@ -78,10 +78,16 @@ export default function Curriculum() {
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">The Huxley Curriculum</h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               A structured academic pathway designed to take students from foundational literacy to active creation. 
               Our curriculum treats AI as a serious academic discipline.
             </p>
+            <a href="https://files.manuscdn.com/user_upload_by_module/session_file/310419663028245929/ZKBsGEHVPCADPIQA.pdf" target="_blank" rel="noopener noreferrer">
+              <Button variant="outline" className="border-purple-400 text-purple-300 hover:bg-purple-950">
+                <Download className="mr-2 h-4 w-4" />
+                Download Full Syllabus (PDF)
+              </Button>
+            </a>
           </div>
 
           <div className="grid gap-8 mb-16">
