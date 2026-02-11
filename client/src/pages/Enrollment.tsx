@@ -66,7 +66,7 @@ export default function Enrollment() {
                   <Calendar className="h-6 w-6 text-blue-400" />
                   <div>
                     <h3 className="text-white font-bold">Upcoming Cohort</h3>
-                    <p className="text-gray-400 text-sm">Starts October 15th, 2025</p>
+                    <p className="text-gray-400 text-sm">Summer 2026</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-4">
