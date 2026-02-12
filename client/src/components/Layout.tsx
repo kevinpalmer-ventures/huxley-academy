@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Link, useLocation } from "wouter";
-import { Brain, ChevronDown } from "lucide-react";
+import { Brain, ChevronDown, Menu, X } from "lucide-react";
 import { useState } from "react";
 import {
   DropdownMenu,
@@ -8,11 +8,28 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   const [location] = useLocation();
+  const [isOpen, setIsOpen] = useState(false);
 
   const isActive = (path: string) => location === path;
+
+  const MobileLink = ({ href, children, className }: { href: string; children: React.ReactNode; className?: string }) => (
+    <Link href={href}>
+      <div 
+        className={`block py-3 px-4 text-lg font-medium rounded-md transition-colors ${
+          isActive(href) 
+            ? "bg-purple-500/20 text-purple-300" 
+            : "text-gray-300 hover:bg-white/5 hover:text-white"
+        } ${className}`}
+        onClick={() => setIsOpen(false)}
+      >
+        {children}
+      </div>
+    </Link>
+  );
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex flex-col">
@@ -68,11 +85,54 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               </Link>
             </div>
 
-            {/* Mobile Menu Placeholder (could be expanded later) */}
-            <div className="md:hidden">
+            {/* Mobile Navigation */}
+            <div className="md:hidden flex items-center gap-4">
               <Link href="/enrollment">
                 <Button size="sm" className="bg-purple-600 text-white">Apply</Button>
               </Link>
+              
+              <Sheet open={isOpen} onOpenChange={setIsOpen}>
+                <SheetTrigger asChild>
+                  <Button variant="ghost" size="icon" className="text-white hover:bg-white/10">
+                    <Menu className="h-6 w-6" />
+                    <span className="sr-only">Toggle menu</span>
+                  </Button>
+                </SheetTrigger>
+                <SheetContent side="right" className="bg-slate-900 border-l border-white/10 w-[300px] sm:w-[400px] p-0">
+                  <div className="flex flex-col h-full">
+                    <div className="p-6 border-b border-white/10 flex items-center justify-between">
+                      <div className="flex items-center gap-2">
+                        <Brain className="h-6 w-6 text-purple-400" />
+                        <span className="text-lg font-bold text-white">Huxley Academy</span>
+                      </div>
+                      {/* Close button is handled by Sheet primitive, but we can add custom one if needed */}
+                    </div>
+                    
+                    <div className="flex-1 overflow-y-auto py-6 px-4 space-y-2">
+                      <MobileLink href="/">Home</MobileLink>
+                      <MobileLink href="/about">About Us</MobileLink>
+                      
+                      <div className="py-2">
+                        <div className="px-4 text-sm font-semibold text-gray-400 uppercase tracking-wider mb-2">Programs</div>
+                        <MobileLink href="/curriculum" className="pl-8">Core Curriculum</MobileLink>
+                        <MobileLink href="/programs/3-week-stem" className="pl-8">3-Week STEM Intensive</MobileLink>
+                      </div>
+                      
+                      <MobileLink href="/parents-investors">Parents & Investors</MobileLink>
+                      <MobileLink href="/schools-ptos">Schools & PTOs</MobileLink>
+                      <MobileLink href="/contact">Contact</MobileLink>
+                    </div>
+                    
+                    <div className="p-6 border-t border-white/10 bg-black/20">
+                      <Link href="/enrollment">
+                        <Button className="w-full bg-purple-600 hover:bg-purple-700 text-white py-6 text-lg" onClick={() => setIsOpen(false)}>
+                          Apply Now
+                        </Button>
+                      </Link>
+                    </div>
+                  </div>
+                </SheetContent>
+              </Sheet>
             </div>
           </div>
         </div>
