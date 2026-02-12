@@ -8,7 +8,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/sheet";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   const [location] = useLocation();
@@ -99,6 +99,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                   </Button>
                 </SheetTrigger>
                 <SheetContent side="right" className="bg-slate-900 border-l border-white/10 w-[300px] sm:w-[400px] p-0">
+                  <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
                   <div className="flex flex-col h-full">
                     <div className="p-6 border-b border-white/10 flex items-center justify-between">
                       <div className="flex items-center gap-2">
