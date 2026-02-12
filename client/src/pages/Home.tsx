@@ -156,8 +156,12 @@ export default function Home() {
               </p>
             </div>
             <div className="w-full md:w-1/3 flex justify-center">
-              <div className="w-32 h-32 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center opacity-80">
-                <span className="text-4xl font-serif text-white font-bold">H</span>
+              <div className="w-48 h-48 rounded-full overflow-hidden border-4 border-purple-500/30 shadow-2xl">
+                <img 
+                  src="https://files.manuscdn.com/user_upload_by_module/session_file/310419663028245929/YkCaImywcfPVlyrb.jpg" 
+                  alt="Aldous Huxley Portrait" 
+                  className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500"
+                />
               </div>
             </div>
           </div>
