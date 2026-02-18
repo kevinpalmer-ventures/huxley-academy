@@ -288,7 +288,7 @@ export default function Resources() {
       <footer className="border-t border-white/10 bg-black/20 backdrop-blur-sm mt-20">
         <div className="container mx-auto px-4 py-8">
           <div className="text-center text-gray-400">
-            <p className="mb-2">3-Week STEM Course: AI & Personal Website Development</p>
+            <p className="mb-2">Huxley Academy: AI & Personal Website Development</p>
             <p className="text-sm">Designed for Rising 8th Graders | Wake County, NC</p>
 
           </div>
