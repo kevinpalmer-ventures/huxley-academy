@@ -39,8 +39,11 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           <div className="flex items-center justify-between">
             <Link href="/">
               <div className="flex items-center gap-2 cursor-pointer">
-                <Brain className="h-8 w-8 text-purple-400" />
-                <span className="text-xl font-bold text-white tracking-tight">Huxley Academy</span>
+                <img 
+                  src="https://files.manuscdn.com/user_upload_by_module/session_file/310419663028245929/JXSxURfjlloqBDOr.png" 
+                  alt="Huxley Academy Logo" 
+                  className="h-10 w-auto"
+                />
               </div>
             </Link>
             
