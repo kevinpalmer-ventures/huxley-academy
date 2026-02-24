@@ -65,16 +65,6 @@ export default function ApplicationWizard() {
   };
 
   const isStep2Valid = () => {
-    // Math and Science levels are optional in the original request but let's make them required based on "all required fields" instruction
-    // Assuming the dropdowns have a default empty state, we check if they are selected.
-    // However, the prompt said "Disable Continue until required fields are completed".
-    // Let's assume the dropdowns are required.
-    return true; // The prompt didn't explicitly mark Step 2 fields as required in the same way, but let's check the original prompt.
-    // Re-reading prompt: "Disable Continue until required fields are completed."
-    // Step 2 fields: Math Level, Science Level are dropdowns. Let's make them required for better data.
-    // Coding/AI/Computer access are toggles/checkboxes, so they always have a value (true/false).
-    // If coding experience is yes, description is required? "If Yes → reveal short text field". Usually implies required.
-    
     if (!formData.mathLevel || !formData.scienceLevel) return false;
     if (formData.hasCodingExperience && !formData.codingExperienceDesc) return false;
     return true;
