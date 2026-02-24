@@ -40,7 +40,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             <Link href="/">
               <div className="flex items-center gap-2 cursor-pointer">
                 <img 
-                  src="https://files.manuscdn.com/user_upload_by_module/session_file/310419663028245929/RVgLSOPwcShalOyE.png" 
+                  src="https://files.manuscdn.com/user_upload_by_module/session_file/310419663028245929/ssvITpetNFXlOSxS.png" 
                   alt="Huxley Academy Logo" 
                   className="h-10 w-auto"
                 />
