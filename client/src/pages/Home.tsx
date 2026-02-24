@@ -9,6 +9,13 @@ export default function Home() {
       {/* Hero Section */}
       <section className="container mx-auto px-4 py-24 md:py-32">
         <div className="max-w-5xl mx-auto text-center">
+          <div className="flex justify-center mb-8">
+            <img 
+              src="https://files.manuscdn.com/user_upload_by_module/session_file/310419663028245929/ZGjfzJtzMLQgRmXy.png" 
+              alt="Huxley Academy Shield Logo" 
+              className="w-32 h-auto md:w-40 drop-shadow-2xl"
+            />
+          </div>
           <div className="inline-block mb-6 px-4 py-1.5 rounded-full bg-purple-900/30 border border-purple-500/30 text-purple-300 text-sm font-medium">
             AI Literacy Starts Here
           </div>
