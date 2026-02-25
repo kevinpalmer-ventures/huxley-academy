@@ -8,6 +8,16 @@
     />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <title>Huxley Academy</title>
+    <script>
+      // Force title update to override any potential environment variable injection
+      document.title = "Huxley Academy";
+      // Also observe title changes and revert if something else tries to change it back
+      new MutationObserver(function(mutations) {
+        if (document.title !== "Huxley Academy") {
+          document.title = "Huxley Academy";
+        }
+      }).observe(document.querySelector('title'), { childList: true });
+    </script>
     <meta property="og:title" content="Huxley Academy" />
     <meta property="og:type" content="website" />
     <meta property="og:description" content="A foundational AI literacy school for middle school students. Understand It. Build It. Improve the World With It." />
